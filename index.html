@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+     <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+    <!--
+        <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+        
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    -->
+ </head>
+<body>
+
+    <div class="container">
+        <h1>something</h1>
+        <hr>
+
+        <h3>Menu</h3>
+        <input type="checkbox" id="prod1" value="180">
+        <label for="prod1"> (₱180)</label><br>
+
+        <input type="checkbox" id="prod2" value="100">
+        <label for="prod2"> (₱100)</label><br>
+
+        <input type="checkbox" id="prod3" value="150">
+        <label for="prod3"> (₱150)</label><br>
+
+        <input type="checkbox" id="prod4" value="170">
+        <label for="prod4"> (₱170)</label><br>
+
+        <input type="checkbox" id="prod5" value="129">
+        <label for="prod5">(₱129)</label><br>
+
+        <h3>Select Size</h3>
+        <input type="radio" id="regular" name="size" value="0" checked>
+        <label for="regular">Regular (+₱0)</label><br>
+
+        <input type="radio" id="large" name="size" value="30">
+        <label for="large">UpSize (+₱30)</label><br>
+
+        <h4>Add-Ons</h4>
+        <input type="checkbox" id="addon1" value="90">
+        <label for="addon1">Extra (+₱90)</label><br>
+
+        <input type="checkbox" id="addon2" value="70">
+        <label for="addon2">Extra (+₱70)</label><br>
+
+        <input type="checkbox" id="addon3" value="70">
+        <label for="addon3">Extra (+₱70)</label><br>
+
+        <button type="button" py-click="create_order">Create Order</button>
+
+        <h3>-- Receipt --</h3>
+        <div id="output1"></div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
+    
+    
+</body>
+</html>
