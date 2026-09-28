@@ -30,6 +30,21 @@ def create_order(e):
 
 
     # calculates the subtotal using boolean multiplication
+<<<<<<< HEAD
+    subtotal = (float(prod1.value) * prod1.checked +
+                float(prod2.value) * prod2.checked +
+                float(prod3.value) * prod3.checked +
+                float(prod4.value) * prod4.checked +
+                float(prod5.value) * prod5.checked +
+                float(regular.value) * regular.checked +
+                float(large.value) * large.checked +
+                float(addon1.value) * addon1.checked +
+                float(addon2.value) * addon2.checked +
+                float(addon3.value) * addon3.checked)
+                float(bar1.value) * bar1.checked +
+                float(bar2.value) * bar2.checked +
+                float(bar3.value) * bar3.checked
+=======
     subtotal = (float(prod1.value) * prod1.checked
     + float(prod2.value) * prod2.checked +
     float(prod3.value) * prod3.checked +
@@ -44,6 +59,7 @@ def create_order(e):
     float(bar2.value) * bar2.checked + 
     float(bar3.value) * bar3.checked)
     
+>>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
 
     # The tax calculation
     tax_rate = 0.12  # 12% because its the standard
