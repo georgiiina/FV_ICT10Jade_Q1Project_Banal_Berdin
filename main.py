@@ -1,5 +1,11 @@
 from pyscript import document, display
 
+def show_main(e):
+    document.getElementById("page1").classList.add("active")
+    document.getElementById("page2").classList.remove("active")
+
+def show_sku(e):
+
 def create_order(e):
     # gets all the elements
     prod1 = document.getElementById("prod1")
