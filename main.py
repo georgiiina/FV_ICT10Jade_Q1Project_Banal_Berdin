@@ -4,8 +4,6 @@ def show_main(e):
     document.getElementById("page1").classList.add("active")
     document.getElementById("page2").classList.remove("active")
 
-def show_sku(e):
-
 def create_order(e):
     # gets all the elements
     prod1 = document.getElementById("prod1")
@@ -30,21 +28,7 @@ def create_order(e):
 
 
     # calculates the subtotal using boolean multiplication
-<<<<<<< HEAD
-    subtotal = (float(prod1.value) * prod1.checked +
-                float(prod2.value) * prod2.checked +
-                float(prod3.value) * prod3.checked +
-                float(prod4.value) * prod4.checked +
-                float(prod5.value) * prod5.checked +
-                float(regular.value) * regular.checked +
-                float(large.value) * large.checked +
-                float(addon1.value) * addon1.checked +
-                float(addon2.value) * addon2.checked +
-                float(addon3.value) * addon3.checked)
-                float(bar1.value) * bar1.checked +
-                float(bar2.value) * bar2.checked +
-                float(bar3.value) * bar3.checked
-=======
+
     subtotal = (float(prod1.value) * prod1.checked
     + float(prod2.value) * prod2.checked +
     float(prod3.value) * prod3.checked +
@@ -59,9 +43,8 @@ def create_order(e):
     float(bar2.value) * bar2.checked + 
     float(bar3.value) * bar3.checked)
     
->>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
 
-    # The tax calculation
+# The tax calculation
     tax_rate = 0.12  # 12% because its the standard
     tax = subtotal * tax_rate
     grand_total = subtotal + tax
@@ -74,3 +57,17 @@ def create_order(e):
     display(f"Tax: ₱{tax:.2f}", target="output1", append=True)
     display(f"Total: ₱{grand_total:.2f}", target="output1", append=True)
     display("Thank you for your order!", target="output1", append=True)
+    
+def show_sku(e):
+    #Clear the div content 
+ document.getElementById('div_id_here').innerHTML = " "
+ 
+  #Create a variable for category here
+ #Create a variable for product name here
+ #Create a variable for stock quantity here
+ 
+ #Create the SKU variable using 
+ SKU_name_here = category_variable[:3].upper() + "-" + product_name_variable[:4].upper() + "-" + str(stock_qty)
+
+#Display the SKU
+ display("SKU: ", SKU_name_here, target='div_id_here')
