@@ -25,24 +25,42 @@
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
+<<<<<<< HEAD
+=======
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: #4e6217;
+>>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
     }
       .container {
         max-width: 500px;
         margin: 0 auto;
+<<<<<<< HEAD
         background-color: rgba(255, 255, 255, 0.92);
+=======
+        background-color: rgba(248, 255, 222, 0.92);
+>>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
         padding: 25px 30px;
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
+<<<<<<< HEAD
 
     h1 {
         color: #333;
+=======
+    h1 {
+        color: #4e6217;
+>>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
         text-align: center;
         margin-top: 0;
     }
 
     h3, h4 {
+<<<<<<< HEAD
         color: #444;
+=======
+        color: #4e6217;
+>>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
         margin-top: 20px;
         margin-bottom: 10px;
     }
@@ -65,7 +83,11 @@
         margin-top: 20px;
         padding: 12px 20px;
         background-color: #608f5a;
+<<<<<<< HEAD
         color: white;
+=======
+        color: rgb(253, 255, 230);
+>>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
         font-size: 16px;
         font-weight: bold;
         border: none;
@@ -76,6 +98,7 @@
     button:hover {
         background-color: #537748;
     }
+<<<<<<< HEAD
 
     #output1 {
         margin-top: 15px;
@@ -89,8 +112,54 @@
     </style>
 
 
+=======
+    #output1 {
+        margin-top: 15px;
+        padding: 12px;
+        border: 1px solid #4e6217;
+        border-radius: 6px;
+        background-color: #ecf4ae;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    #nav-a {
+        background-color: hsl(57, 100%, 90%);
+        padding-top: 20px;
+    }
+    navbar {
+        width: 100%;
+        background-color: antiquewhite;
+        border-bottom: #537748;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+
+>>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
  </head>
 <body>
+
+       <navbar>
+        <div class="nav-container">
+            <span id="page1" class="nav-link active" onclick="switchTab('food-container')"><h1>Main</h1></span>
+            <span id="page2" class="nav-link inactive" onclick="switchTab('sku-container')"><h1>SKU Generator</h1></span>
+        </div>
+       </navbar>
+
+
+        <br>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+    <div id="food-container" class="tab-section active-tab">
+        <center>
+        <img src="ExtraVirginResto.png" id="logo">
+        </center>
+    </div>
 
     <div class="container">
         <h1>Extra Virgin Resto</h1>
@@ -113,13 +182,13 @@
         <label for="prod5"> Olive Wreath Platter (₱129)</label><br>
 
         <h3>Select Size</h3>
-        <input type="radio" id="regular" name="size" value="0" checked>
+        <input type="radio" id="regular" name="size" value="0">
         <label for="regular">Regular (+₱0)</label><br>
 
         <input type="radio" id="large" name="size" value="30">
         <label for="large">UpSize (+₱30)</label><br>
 
-        <h4>Add-Ons</h4>
+        <h3>Add-Ons</h3>
         <input type="checkbox" id="addon1" value="90">
         <label for="addon1">Extra Olive Oil (+₱90)</label><br>
 
@@ -138,10 +207,13 @@
 
         <input type="checkbox" id="bar3" value="150">
         <label for="bar3">Sparkling Olives (₱150)</label><br>
+<<<<<<< HEAD
 
           <h3>Select Size</h3>
         <input type="radio" id="regular" name="size" value="0" checked>
         <label for="regular">Regular (+₱0)</label><br>
+=======
+>>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
 
         <button type="button" py-click="create_order">Create Order</button>
 
@@ -149,6 +221,9 @@
         <div id="output1"></div>
     </div>
 
+     <div id="sku-container" class="tab-section"></div>
+     <h1>SKU Generator</h1>
+     <br>
     <script type="py" src="main.py"></script>
 </body>
 </html>
