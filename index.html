@@ -4,160 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
-     <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
 
-    <!--
-        <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
-        <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
-        
-        <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
-        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-    -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-image: url('https://i.pinimg.com/1200x/5e/b2/15/5eb215885f625213624834267b067a33.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
 
-     <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 40px 20px;
-        background-image: url('https://i.pinimg.com/736x/a6/47/26/a64726341909a435f90143608f20b7d3.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-<<<<<<< HEAD
-=======
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        color: #4e6217;
->>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
-    }
-      .container {
-        max-width: 500px;
-        margin: 0 auto;
-<<<<<<< HEAD
-        background-color: rgba(255, 255, 255, 0.92);
-=======
-        background-color: rgba(248, 255, 222, 0.92);
->>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
-        padding: 25px 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    }
-<<<<<<< HEAD
+        nav {
+            width: 100%;
+            background-color: antiquewhite;
+            border-bottom: 2px solid #537748;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+        }
 
-    h1 {
-        color: #333;
-=======
-    h1 {
-        color: #4e6217;
->>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
-        text-align: center;
-        margin-top: 0;
-    }
+        .nav-container {
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+        }
 
-    h3, h4 {
-<<<<<<< HEAD
-        color: #444;
-=======
-        color: #4e6217;
->>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.92);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
 
-    label {
-        display: inline-block;
-        margin-bottom: 8px;
-        cursor: pointer;
-    }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 0;
+        }
 
-    input[type="checkbox"],
-    input[type="radio"] {
-        margin-right: 8px;
-        transform: scale(1.1);
-        cursor: pointer;
-    }
+        h3, h4 {
+            color: #444;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-    button {
-        width: 100%;
-        margin-top: 20px;
-        padding: 12px 20px;
-        background-color: #608f5a;
-<<<<<<< HEAD
-        color: white;
-=======
-        color: rgb(253, 255, 230);
->>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
-        font-size: 16px;
-        font-weight: bold;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-    }
+        label {
+            display: inline-block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
 
-    button:hover {
-        background-color: #537748;
-    }
-<<<<<<< HEAD
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
 
-    #output1 {
-        margin-top: 15px;
-        padding: 12px;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        background-color: #ffffff;
-        font-size: 15px;
-        line-height: 1.5;
-    }
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #608f5a;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #537748;
+        }
+
+        #output1 {
+            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #ffffff;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .tab-section {
+            display: none;
+        }
+
+        .active-tab {
+            display: block;
+        }
     </style>
-
-
-=======
-    #output1 {
-        margin-top: 15px;
-        padding: 12px;
-        border: 1px solid #4e6217;
-        border-radius: 6px;
-        background-color: #ecf4ae;
-        font-size: 15px;
-        line-height: 1.5;
-    }
-    #nav-a {
-        background-color: hsl(57, 100%, 90%);
-        padding-top: 20px;
-    }
-    navbar {
-        width: 100%;
-        background-color: antiquewhite;
-        border-bottom: #537748;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: center;
-    }
-    </style>
-
->>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
- </head>
+</head>
 <body>
 
-       <navbar>
+    <nav>
         <div class="nav-container">
             <span id="page1" class="nav-link active" onclick="switchTab('food-container')"><h1>Main</h1></span>
             <span id="page2" class="nav-link inactive" onclick="switchTab('sku-container')"><h1>SKU Generator</h1></span>
         </div>
-       </navbar>
-
-
-        <br>
-      </ul>
-
-    </div>
-  </div>
-</nav>
+    </nav>
 
     <div id="food-container" class="tab-section active-tab">
         <center>
-        <img src="ExtraVirginResto.png" id="logo">
+            <img src="ExtraVirginResto.png" id="logo" alt="Logo">
         </center>
     </div>
 
@@ -182,10 +141,10 @@
         <label for="prod5"> Olive Wreath Platter (₱129)</label><br>
 
         <h3>Select Size</h3>
-        <input type="radio" id="regular" name="size" value="0">
+        <input type="radio" id="regular" name="food-size" value="0" checked>
         <label for="regular">Regular (+₱0)</label><br>
 
-        <input type="radio" id="large" name="size" value="30">
+        <input type="radio" id="large" name="food-size" value="30">
         <label for="large">UpSize (+₱30)</label><br>
 
         <h3>Add-Ons</h3>
@@ -198,7 +157,7 @@
         <input type="checkbox" id="addon3" value="70">
         <label for="addon3">Extra Cheese (+₱70)</label><br>
 
-         <h3>Bar Menu</h3>
+        <h3>Bar Menu</h3>
         <input type="checkbox" id="bar1" value="250">
         <label for="bar1"> Dirty Martini (₱250)</label><br>
 
@@ -207,13 +166,10 @@
 
         <input type="checkbox" id="bar3" value="150">
         <label for="bar3">Sparkling Olives (₱150)</label><br>
-<<<<<<< HEAD
 
-          <h3>Select Size</h3>
-        <input type="radio" id="regular" name="size" value="0" checked>
-        <label for="regular">Regular (+₱0)</label><br>
-=======
->>>>>>> a118638d385f413a42e0036f72f41e41257c01f8
+        <h3>Select Size</h3>
+        <input type="radio" id="bar-regular" name="bar-size" value="0" checked>
+        <label for="bar-regular">Regular (+₱0)</label><br>
 
         <button type="button" py-click="create_order">Create Order</button>
 
@@ -221,13 +177,10 @@
         <div id="output1"></div>
     </div>
 
-     <div id="sku-container" class="tab-section"></div>
-     <h1>SKU Generator</h1>
-     <br>
+    <div id="sku-container" class="tab-section">
+        <h1>SKU Generator</h1>
+    </div>
+
     <script type="py" src="main.py"></script>
-</body>
-</html>
-    
-    
 </body>
 </html>
