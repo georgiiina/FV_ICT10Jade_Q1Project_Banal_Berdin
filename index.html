@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
-    
+
     <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
 
@@ -18,6 +19,7 @@
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
 
         nav {
@@ -50,7 +52,8 @@
             margin-top: 0;
         }
 
-        h3, h4 {
+        h3,
+        h4 {
             color: #444;
             margin-top: 20px;
             margin-bottom: 10px;
@@ -105,85 +108,77 @@
         }
     </style>
 </head>
+
 <body>
 
     <nav>
-        <div class="nav-container">
-            <button id="page1" class="nav-link active" py-click="show_main">Main </button>
-            <button id="page2" class="nav-link inactive" py-click="show_sku">SKU Generator</button>
-        </div>
-       </nav>
-
-
-        <br>
-      </ul>
-
-    </div>
-  </div>
-</nav>
+        <link rel="stylesheet" href="style.css">
+        <ul>
+            <li><a href="index.html"><b>Main</b></a></li>
+            <li><a href="page2.html"><b>SKU Generator</b></a></li>
+        </ul>
     </nav>
-
     <div id="food-container" class="tab-section active-tab">
         <center>
             <img src="ExtraVirginResto.png" id="logo" alt="Logo">
         </center>
 
-    <div class="container">
-        <h1>Extra Virgin Resto</h1>
-        <hr>
+        <div class="container">
+            <h1>Extra Virgin Resto</h1>
+            <hr>
 
-        <h3>Food Menu</h3>
-        <input type="checkbox" id="prod1" value="180">
-        <label for="prod1"> Olive Roasted Chicken(₱180)</label><br>
+            <h3>Food Menu</h3>
+            <input type="checkbox" id="prod1" value="180">
+            <label for="prod1"> Olive Roasted Chicken(₱180)</label><br>
 
-        <input type="checkbox" id="prod2" value="100">
-        <label for="prod2"> Green Olive Pasta(₱100)</label><br>
+            <input type="checkbox" id="prod2" value="100">
+            <label for="prod2"> Green Olive Pasta(₱100)</label><br>
 
-        <input type="checkbox" id="prod3" value="150">
-        <label for="prod3"> Olive Tapenade (₱150)</label><br>
+            <input type="checkbox" id="prod3" value="150">
+            <label for="prod3"> Olive Tapenade (₱150)</label><br>
 
-        <input type="checkbox" id="prod4" value="170">
-        <label for="prod4"> Olive Garden Salad (₱170)</label><br>
+            <input type="checkbox" id="prod4" value="170">
+            <label for="prod4"> Olive Garden Salad (₱170)</label><br>
 
-        <input type="checkbox" id="prod5" value="129">
-        <label for="prod5"> Olive Wreath Platter (₱129)</label><br>
+            <input type="checkbox" id="prod5" value="129">
+            <label for="prod5"> Olive Wreath Platter (₱129)</label><br>
 
-        <h3>Select Size</h3>
-        <input type="radio" id="regular" name="food-size" value="0" checked>
-        <label for="regular">Regular (+₱0)</label><br>
+            <h3>Select Size</h3>
+            <input type="radio" id="regular" name="food-size" value="0" checked>
+            <label for="regular">Regular (+₱0)</label><br>
 
-        <input type="radio" id="large" name="food-size" value="30">
-        <label for="large">UpSize (+₱30)</label><br>
+            <input type="radio" id="large" name="food-size" value="30">
+            <label for="large">UpSize (+₱30)</label><br>
 
-        <h3>Add-Ons</h3>
-        <input type="checkbox" id="addon1" value="90">
-        <label for="addon1">Extra Olive Oil (+₱90)</label><br>
+            <h3>Add-Ons</h3>
+            <input type="checkbox" id="addon1" value="90">
+            <label for="addon1">Extra Olive Oil (+₱90)</label><br>
 
-        <input type="checkbox" id="addon2" value="70">
-        <label for="addon2">Extra Olives (+₱70)</label><br>
+            <input type="checkbox" id="addon2" value="70">
+            <label for="addon2">Extra Olives (+₱70)</label><br>
 
-        <input type="checkbox" id="addon3" value="70">
-        <label for="addon3">Extra Cheese (+₱70)</label><br>
+            <input type="checkbox" id="addon3" value="70">
+            <label for="addon3">Extra Cheese (+₱70)</label><br>
 
-        <h3>Bar Menu</h3>
-        <input type="checkbox" id="bar1" value="250">
-        <label for="bar1"> Dirty Martini (₱250)</label><br>
+            <h3>Bar Menu</h3>
+            <input type="checkbox" id="bar1" value="250">
+            <label for="bar1"> Dirty Martini (₱250)</label><br>
 
-        <input type="checkbox" id="bar2" value="270">
-        <label for="bar2">Mojito(₱270)</label><br>
+            <input type="checkbox" id="bar2" value="270">
+            <label for="bar2">Mojito(₱270)</label><br>
 
-        <input type="checkbox" id="bar3" value="150">
-        <label for="bar3">Sparkling Olives (₱150)</label><br>
+            <input type="checkbox" id="bar3" value="150">
+            <label for="bar3">Sparkling Olives (₱150)</label><br>
 
-        <h3>Select Size</h3>
-        <input type="radio" id="bar-regular" name="bar-size" value="0" checked>
-        <label for="bar-regular">Regular (+₱0)</label><br>
+            <h3>Select Size</h3>
+            <input type="radio" id="bar-regular" name="bar-size" value="0" checked>
+            <label for="bar-regular">Regular (+₱0)</label><br>
 
-        <button type="button" py-click="create_order">Create Order</button>
+            <button type="button" py-click="create_order">Create Order</button>
 
-        <h3>-- Receipt --</h3>
-        <div id="output1"></div>
-    </div>
+            <h3>-- Receipt --</h3>
+            <div id="output1"></div>
+        </div>
     </div>
 
     <div id="sku-container" class="tab-section">
@@ -192,4 +187,5 @@
 
     <script type="py" src="main.py"></script>
 </body>
+
 </html>
