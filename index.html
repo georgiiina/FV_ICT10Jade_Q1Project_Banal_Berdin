@@ -74,7 +74,7 @@
         cursor: pointer;
     }
 
-    button:hover {
+    button {
         background-color: #537748;
     }
     #output1 {
@@ -90,7 +90,7 @@
         background-color: hsl(57, 100%, 90%);
         padding-top: 20px;
     }
-    navbar {
+    nav {
         width: 100%;
         background-color: antiquewhite;
         border-bottom: #537748;
@@ -103,12 +103,12 @@
  </head>
 <body>
 
-       <navbar>
+       <nav>
         <div class="nav-container">
-            <span id="page1" class="nav-link active" onclick="switchTab('food-container')"><h1>Main</h1></span>
-            <span id="page2" class="nav-link inactive" onclick="switchTab('sku-container')"><h1>SKU Generator</h1></span>
+            <button id="page1" class="nav-link active" py-click="show_main">Main </button>
+            <button id="page2" class="nav-link inactive" py-click="show_sku">SKU Generator</button>
         </div>
-       </navbar>
+       </nav>
 
 
         <br>
@@ -122,7 +122,6 @@
         <center>
         <img src="ExtraVirginResto.png" id="logo">
         </center>
-    </div>
 
     <div class="container">
         <h1>Extra Virgin Resto</h1>
@@ -175,6 +174,7 @@
 
         <h3>-- Receipt --</h3>
         <div id="output1"></div>
+    </div>
     </div>
 
      <div id="sku-container" class="tab-section"></div>
