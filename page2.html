@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-image: url('https://i.pinimg.com/1200x/5e/b2/15/5eb215885f625213624834267b067a33.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        nav {
+            width: 100%;
+            background-color: antiquewhite;
+            border-bottom: 2px solid #537748;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-container {
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.92);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        h3,
+        h4 {
+            color: #444;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 8px;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #608f5a;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #537748;
+        }
+
+        #output1 {
+            margin-top: 15px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #ffffff;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .tab-section {
+            display: none;
+        }
+
+        .active-tab {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <link rel="stylesheet" href="style.css">
+        <ul>
+            <li><a href="index.html"><b>Main</b></a></li>
+            <li><a href="page2.html"><b>SKU Generator</b></a></li>
+        </ul>
+    </nav>
+    <div id="food-container" class="tab-section active-tab">
+        <center>
+            <img src="ExtraVirginResto.png" id="logo" alt="Logo">
+        </center>
+
+        <div class="container">
+            <h1>SKU Generator</h1>
+            <hr>
+            <select name="Category" id="category">
+                <option value="0">Select Category</option>
+                <option value="1">Appetizer</option>
+                <option value="2">Entree</option>
+                <option value="3">Extras</option>
+                <option value="4">Drinks</option>
+            </select>
+            <br>
+
+            <input type="checkbox" id="prod1" value="180">
+            <label for="prod1"> Olive Roasted Chicken(₱180)</label><br>
+
+            <input type="checkbox" id="prod2" value="100">
+            <label for="prod2"> Green Olive Pasta(₱100)</label><br>
+
+            <input type="checkbox" id="prod3" value="150">
+            <label for="prod3"> Olive Tapenade (₱150)</label><br>
+
+            <input type="checkbox" id="prod4" value="170">
+            <label for="prod4"> Olive Garden Salad (₱170)</label><br>
+
+            <input type="checkbox" id="prod5" value="129">
+            <label for="prod5"> Olive Wreath Platter (₱129)</label><br>
+
+            <h3>Select Size</h3>
+            <input type="radio" id="regular" name="food-size" value="0" checked>
+            <label for="regular">Regular (+₱0)</label><br>
+
+            <input type="radio" id="large" name="food-size" value="30">
+            <label for="large">UpSize (+₱30)</label><br>
+
+            <h3>Add-Ons</h3>
+            <input type="checkbox" id="addon1" value="90">
+            <label for="addon1">Extra Olive Oil (+₱90)</label><br>
+
+            <input type="checkbox" id="addon2" value="70">
+            <label for="addon2">Extra Olives (+₱70)</label><br>
+
+            <input type="checkbox" id="addon3" value="70">
+            <label for="addon3">Extra Cheese (+₱70)</label><br>
+
+            <h3>Bar Menu</h3>
+            <input type="checkbox" id="bar1" value="250">
+            <label for="bar1"> Dirty Martini (₱250)</label><br>
+
+            <input type="checkbox" id="bar2" value="270">
+            <label for="bar2">Mojito(₱270)</label><br>
+
+            <input type="checkbox" id="bar3" value="150">
+            <label for="bar3">Sparkling Olives (₱150)</label><br>
+
+            <h3>Select Size</h3>
+            <input type="radio" id="bar-regular" name="bar-size" value="0" checked>
+            <label for="bar-regular">Regular (+₱0)</label><br>
+
+            <button type="button" py-click="show_SKU">Generate SKU</button>
+
+            <h3>-- Receipt --</h3>
+            <div id="output1"></div>
+        </div>
+    </div>
+
+    <div id="sku-container" class="tab-section">
+        <h1>SKU Generator</h1>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+
+</html>
