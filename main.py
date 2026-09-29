@@ -58,16 +58,17 @@ def create_order(e):
     display(f"Total: ₱{grand_total:.2f}", target="output1", append=True)
     display("Thank you for your order!", target="output1", append=True)
     
-def show_sku(e):
-    #Clear the div content 
- document.getElementById('div_id_here').innerHTML = " "
- 
-  #Create a variable for category here
- #Create a variable for product name here
- #Create a variable for stock quantity here
- 
- #Create the SKU variable using 
- SKU_name_here = category_variable[:3].upper() + "-" + product_name_variable[:4].upper() + "-" + str(stock_qty)
+def show_SKU(e):
+    #variables derived from ids of inputs
+    categ = document.getElementById("category").value
+    prodnam = document.getElementById("productname").value
+    stoc = document.getElementById("stock_qty").value
+    
+    #collects the first three letters of the catergory, the first four of the provided product, and the stock in string form
+    sku_container = categ[:3].upper() + "-" + prodnam[:4].upper() + "-" + str(stoc)
+    #prevents previous input from being saved
+    document.getElementById('output1').innerHTML = ""
+    #displays final calculated SKU
+    display(sku_container, target="output1")
 
-#Display the SKU
- display("SKU: ", SKU_name_here, target='div_id_here')
+references: 
