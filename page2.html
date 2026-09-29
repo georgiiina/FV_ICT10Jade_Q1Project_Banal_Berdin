@@ -10,7 +10,6 @@
     <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 40px 20px;
             background-image: url('https://i.pinimg.com/1200x/5e/b2/15/5eb215885f625213624834267b067a33.jpg');
@@ -98,12 +97,12 @@
             line-height: 1.5;
         }
 
-        .tab-section {
-            display: none;
-        }
-
         .active-tab {
             display: block;
+        }
+        #category{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #333;
         }
     </style>
 </head>
@@ -116,81 +115,43 @@
             <li><a href="page2.html"><b>SKU Generator</b></a></li>
         </ul>
     </nav>
-    <div id="food-container" class="tab-section active-tab">
+    <div id="food-container" class="active-tab">
         <center>
             <img src="ExtraVirginResto.png" id="logo" alt="Logo">
         </center>
 
-        <div class="container">
+        <div class="container" id="skugen">
             <h1>SKU Generator</h1>
             <hr>
+            <h3>Category</h3>
             <select name="Category" id="category">
                 <option value="0">Select Category</option>
-                <option value="1">Appetizer</option>
-                <option value="2">Entree</option>
-                <option value="3">Extras</option>
-                <option value="4">Drinks</option>
+                <option value="Appetizer">Appetizer</option>
+                <option value="Entree">Entree</option>
+                <option value="Extras">Extras</option>
+                <option value="Drinks">Drinks</option>
             </select>
             <br>
 
-            <input type="checkbox" id="prod1" value="180">
-            <label for="prod1"> Olive Roasted Chicken(₱180)</label><br>
-
-            <input type="checkbox" id="prod2" value="100">
-            <label for="prod2"> Green Olive Pasta(₱100)</label><br>
-
-            <input type="checkbox" id="prod3" value="150">
-            <label for="prod3"> Olive Tapenade (₱150)</label><br>
-
-            <input type="checkbox" id="prod4" value="170">
-            <label for="prod4"> Olive Garden Salad (₱170)</label><br>
-
-            <input type="checkbox" id="prod5" value="129">
-            <label for="prod5"> Olive Wreath Platter (₱129)</label><br>
-
-            <h3>Select Size</h3>
-            <input type="radio" id="regular" name="food-size" value="0" checked>
-            <label for="regular">Regular (+₱0)</label><br>
-
-            <input type="radio" id="large" name="food-size" value="30">
-            <label for="large">UpSize (+₱30)</label><br>
-
-            <h3>Add-Ons</h3>
-            <input type="checkbox" id="addon1" value="90">
-            <label for="addon1">Extra Olive Oil (+₱90)</label><br>
-
-            <input type="checkbox" id="addon2" value="70">
-            <label for="addon2">Extra Olives (+₱70)</label><br>
-
-            <input type="checkbox" id="addon3" value="70">
-            <label for="addon3">Extra Cheese (+₱70)</label><br>
-
-            <h3>Bar Menu</h3>
-            <input type="checkbox" id="bar1" value="250">
-            <label for="bar1"> Dirty Martini (₱250)</label><br>
-
-            <input type="checkbox" id="bar2" value="270">
-            <label for="bar2">Mojito(₱270)</label><br>
-
-            <input type="checkbox" id="bar3" value="150">
-            <label for="bar3">Sparkling Olives (₱150)</label><br>
-
-            <h3>Select Size</h3>
-            <input type="radio" id="bar-regular" name="bar-size" value="0" checked>
-            <label for="bar-regular">Regular (+₱0)</label><br>
+            <h3>Product Name</h3>
+            <input type="text" id="productname" name="productname" placeholder="Ex: Olive Roasted Chicken" required>
+            <br>
+            <h3>Stock Quantity</h3>
+            <input type="text" id="stock_qty" name="stock_qty" placeholder="Ex: 35" required>
+            <br>
 
             <button type="button" py-click="show_SKU">Generate SKU</button>
 
-            <h3>-- Receipt --</h3>
-            <div id="output1"></div>
+            <h3>-- FINAL SKU: --</h3>
+            <div id="output1" class="tab-section">
+            </div>
+
+            <script type="py" src="main.py"></script>
+
         </div>
     </div>
 
-    <div id="sku-container" class="tab-section">
-        <h1>SKU Generator</h1>
-    </div>
-
-    <script type="py" src="main.py"></script>
 </body>
 
 </html>
+
