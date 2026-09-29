@@ -71,4 +71,6 @@ def show_SKU(e):
     #displays final calculated SKU
     display(sku_container, target="output1")
 
-references: 
+#references: 
+
+#background image: Top View Empty Wooden Table And Tablecloth Copy Space Background. (n.d.). PngTree. Retrieved September 28, 2026 from https://pngtree.com/freebackground/top-view-empty-wooden-table-and-tablecloth-copy-space_15476313.html
